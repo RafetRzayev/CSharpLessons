@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLessons", "CSharpLessons\CSharpLessons.csproj", "{1419064F-3B65-4D71-B10F-29B15F423109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyManagmentSystem", "AcademyManagmentSystem\AcademyManagmentSystem.csproj", "{8D036A0A-A58D-4EE9-95E2-99245C60D227}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1419064F-3B65-4D71-B10F-29B15F423109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1419064F-3B65-4D71-B10F-29B15F423109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1419064F-3B65-4D71-B10F-29B15F423109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D036A0A-A58D-4EE9-95E2-99245C60D227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D036A0A-A58D-4EE9-95E2-99245C60D227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D036A0A-A58D-4EE9-95E2-99245C60D227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D036A0A-A58D-4EE9-95E2-99245C60D227}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
