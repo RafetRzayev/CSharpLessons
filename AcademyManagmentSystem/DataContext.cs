@@ -1,4 +1,6 @@
-﻿namespace AcademyManagmentSystem;
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace AcademyManagmentSystem;
 
 internal class DataContext
 {
