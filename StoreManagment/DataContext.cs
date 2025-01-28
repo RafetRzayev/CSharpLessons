@@ -46,10 +46,15 @@ namespace StoreManagment
             Receipts = new Receipt[2];
             Receipts[0] = new Receipt(Sellers[0], [BuyItems[0], BuyItems[1]]);
             Receipts[0] = new Receipt(Sellers[1], [BuyItems[2]]);
+
+            Users = new User[2];
+            Users[0] = new User("satici", "1234", true, Sellers[0].Id, -1);
+            Users[1] = new User("musteri", "1234", false, -1, Customers[0].Id);
         }
 
         private int _productIndex = 4;
 
+        public User[] Users { get; set; }
         public Product[] Products { get; set; }
         public Store[] Stores { get; set; }
         public Customer[] Customers { get; set; }
@@ -88,7 +93,9 @@ namespace StoreManagment
             {
                 if (item == null) continue;
 
-                if(name == item.Name) return true;
+                if (item.Name == "Undefined") continue;
+
+                if (name == item.Name) return true;
             }
 
             return false;
@@ -136,7 +143,7 @@ namespace StoreManagment
 
             var buyItem = new BuyItem(product, productCount);
 
-            var receipt = new Receipt(GetSeller(5), [buyItem]);
+            var receipt = new Receipt(GetSellerByStoreId(5), [buyItem]);
             PrintHelper.PrintReceipt(receipt);
 
         }
@@ -171,13 +178,29 @@ namespace StoreManagment
             {
                 if (item == null) continue;
 
+                if (item.Name == "Undefined") continue;
+
                 if (item.Id == id) return item;
             }
 
             return new Product("Undefined", 0);
         }
 
-        public Seller GetSeller(int storeId)
+        public int GetProductIndex(int id, Product[] products)
+        {
+            for (int i = 0; i < products.Length; i++)
+            {
+                if (products[i] == null) continue;
+
+                if (products[i].Name == "Undefined") continue;
+
+                if (products[i].Id == id) return i;
+            }
+
+            return -1;
+        }
+
+        public Seller GetSellerByStoreId(int storeId)
         {
             foreach (var item in Sellers)
             {
@@ -186,6 +209,28 @@ namespace StoreManagment
             }
 
             return new Seller("Undefined", 0);
+        }
+
+        public Seller GetSeller(int sellerId)
+        {
+            foreach (var item in Sellers)
+            {
+                if (item.Id == sellerId)
+                    return item;
+            }
+
+            return new Seller("Undefined", 0);
+        }
+
+        public User GetUser(string username, string password)
+        {
+            foreach (var item in Users)
+            {
+                if (username == item.Username && password == item.Password)
+                    return item;
+            }
+
+            return new User() { Username = "Undefined" };
         }
     }
 }

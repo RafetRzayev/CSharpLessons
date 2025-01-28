@@ -18,6 +18,8 @@ namespace StoreManagment
             {
                 if (product == null) continue;
 
+                if (product.Name == "Undefined") continue;
+
                 Console.WriteLine($"{product.Id,-6}{product.Name,-20}{product.Price,-6}");
             }
 
