@@ -41,7 +41,7 @@
 
                     var product = new Product(name, price);
                     var products = new Product[store.Products.Length + 1];
-                    products = [..store.Products,product];
+                    products = [.. store.Products, product];
                     //for (int i = 0; i< store.Products.Length; i++)
                     //{
                     //    products[i] = store.Products[i];
@@ -50,7 +50,7 @@
                     store.Products = products;
                     PrintHelper.PrintProducts(store.Products);
                 }
-                else if(command == "remove")
+                else if (command == "remove")
                 {
                     Console.WriteLine("Choose product id:");
                     int id = int.Parse(Console.ReadLine());
@@ -59,11 +59,19 @@
                     store.Products[index].Name = "Undefined";
                     PrintHelper.PrintProducts(store.Products);
                 }
-                else if(command == "update")
+                else if (command == "update")
                 {
                     //print product 
-                    //product id
-                    //find product
+                    PrintHelper.PrintProducts(store.Products);
+                    Console.Write("Enter product id:");
+                    int id = int.Parse(Console.ReadLine());
+                    var index = dataContext.GetProductIndex(id, store.Products);
+                    if (index == -1) return;
+
+                    Console.Write("Enter new price:");
+                    decimal price = decimal.Parse(Console.ReadLine());
+                    store.Products[index].Price = price;
+                    PrintHelper.PrintProducts(store.Products);
                     //input product price
                     //product.price=price
                     //print product
