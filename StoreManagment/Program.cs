@@ -34,9 +34,23 @@
 
                 if (command == "add")
                 {
+                    Console.Write("Enter the name:");
+                    string name = Console.ReadLine();
+                    Console.Write("Enter the price:");
+                    decimal price = decimal.Parse(Console.ReadLine());
 
+                    var product = new Product(name, price);
+                    var products = new Product[store.Products.Length + 1];
+                    products = [..store.Products,product];
+                    //for (int i = 0; i< store.Products.Length; i++)
+                    //{
+                    //    products[i] = store.Products[i];
+                    //}
+                    //products[products.Length - 1] = product;
+                    store.Products = products;
+                    PrintHelper.PrintProducts(store.Products);
                 }
-                else
+                else if(command == "remove")
                 {
                     Console.WriteLine("Choose product id:");
                     int id = int.Parse(Console.ReadLine());
@@ -44,6 +58,15 @@
                     if (index == -1) return;
                     store.Products[index].Name = "Undefined";
                     PrintHelper.PrintProducts(store.Products);
+                }
+                else if(command == "update")
+                {
+                    //print product 
+                    //product id
+                    //find product
+                    //input product price
+                    //product.price=price
+                    //print product
                 }
 
             }
