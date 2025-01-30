@@ -65,12 +65,12 @@
                     PrintHelper.PrintProducts(store.Products);
                     Console.Write("Enter product id:");
                     int id = int.Parse(Console.ReadLine());
-                    var index = dataContext.GetProductIndex(id, store.Products);
-                    if (index == -1) return;
+                    var product = dataContext.GetProduct(id, store.Products);
+                    if (product.Name == "Undefined") return;
 
                     Console.Write("Enter new price:");
                     decimal price = decimal.Parse(Console.ReadLine());
-                    store.Products[index].Price = price;
+                    product.Price = price;
                     PrintHelper.PrintProducts(store.Products);
                     //input product price
                     //product.price=price

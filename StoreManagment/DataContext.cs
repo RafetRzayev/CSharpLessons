@@ -186,6 +186,21 @@ namespace StoreManagment
             return new Product("Undefined", 0);
         }
 
+        public Product GetProduct(int id, Product[] products)
+        {
+            foreach (var item in products)
+            {
+                if (item == null) continue;
+
+                if (item.Name == "Undefined") continue;
+
+                if (item.Id == id) return item;
+            }
+
+            return new Product("Undefined", 0);
+        }
+
+
         public int GetProductIndex(int id, Product[] products)
         {
             for (int i = 0; i < products.Length; i++)
