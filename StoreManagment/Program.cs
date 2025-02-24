@@ -18,7 +18,7 @@
 
             } while (user.Username == "Undefined");
 
-            if (user.IsSeller)
+            if (user.UserType == UserType.Seller)
             {
                 var seller = dataContext.GetSeller(user.SellerId);
                 Console.WriteLine($"Welcome {seller.Name}");

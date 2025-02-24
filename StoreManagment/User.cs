@@ -12,20 +12,27 @@ namespace StoreManagment
         {
             
         }
-        public User(string username, string password, bool isSeller, int sellerId, int customerId)
+        public User(string username, string password, UserType userType, int sellerId, int customerId)
         {
             Username = username;
             Password = password;
-            IsSeller = isSeller;
+            UserType = userType;
             SellerId = sellerId;
             CustomerId = customerId;
         }
 
         public string Username {  get; set; }
         public string Password { get; set; }
-        public bool IsSeller { get; set; }
+        public UserType UserType { get; set; }
         public int SellerId {  get; set; }
         public int CustomerId {  get; set; }
         //public int ReferencedPersonId {  get; set; }
+    }
+
+    enum UserType
+    {
+        Admin,
+        Seller,
+        Customer
     }
 }

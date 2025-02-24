@@ -48,8 +48,8 @@ namespace StoreManagment
             Receipts[0] = new Receipt(Sellers[1], [BuyItems[2]]);
 
             Users = new User[2];
-            Users[0] = new User("satici", "1234", true, Sellers[0].Id, -1);
-            Users[1] = new User("musteri", "1234", false, -1, Customers[0].Id);
+            Users[0] = new User("satici", "1234", UserType.Seller, Sellers[0].Id, -1);
+            Users[1] = new User("musteri", "1234", UserType.Customer, -1, Customers[0].Id);
         }
 
         private int _productIndex = 4;
