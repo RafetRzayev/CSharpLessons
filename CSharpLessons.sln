@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Dele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "TypeCasting\TypeCasting.csproj", "{12D8F8DB-529B-40D2-9EDE-617507F4190C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{12D8F8DB-529B-40D2-9EDE-617507F4190C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D8F8DB-529B-40D2-9EDE-617507F4190C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D8F8DB-529B-40D2-9EDE-617507F4190C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
