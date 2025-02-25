@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "TypeCasting\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{3836FF1A-9BBB-4A2E-A378-29B579480894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortVisualization", "SortVisualization\SortVisualization.csproj", "{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D83AB7B-ACD7-43CA-BFFB-E02C31E1743E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3836FF1A-9BBB-4A2E-A378-29B579480894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3836FF1A-9BBB-4A2E-A378-29B579480894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3836FF1A-9BBB-4A2E-A378-29B579480894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3836FF1A-9BBB-4A2E-A378-29B579480894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

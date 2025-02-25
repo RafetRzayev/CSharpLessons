@@ -107,6 +107,20 @@ namespace TicTacToe
 
                 return;
             }
+
+
+            for (int i = 0; i < _boxes.GetLength(0); i++)
+            {
+                for (int j = 0; j < _boxes.GetLength(1); j++)
+                {
+                    if (_boxes[i, j].Text == "")
+                    {
+                        return;
+                    }
+                }
+            }
+
+            lblResultMessage.Text = "Draw";
         }
 
         private void ChangeColor(Button[] boxes)
