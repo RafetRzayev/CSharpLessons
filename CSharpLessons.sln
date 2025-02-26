@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortVisualization", "SortVisualization\SortVisualization.csproj", "{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{653FA1FF-954B-4496-86B1-45DF0DB375D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagmentApplication", "StoreManagmentApplication\StoreManagmentApplication.csproj", "{5C8E57BC-6B94-4DCA-BA42-79C2173AF5D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7BAFFBA-6D1A-4DB0-B60E-D8E3A203907E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653FA1FF-954B-4496-86B1-45DF0DB375D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653FA1FF-954B-4496-86B1-45DF0DB375D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653FA1FF-954B-4496-86B1-45DF0DB375D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653FA1FF-954B-4496-86B1-45DF0DB375D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8E57BC-6B94-4DCA-BA42-79C2173AF5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8E57BC-6B94-4DCA-BA42-79C2173AF5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8E57BC-6B94-4DCA-BA42-79C2173AF5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8E57BC-6B94-4DCA-BA42-79C2173AF5D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
