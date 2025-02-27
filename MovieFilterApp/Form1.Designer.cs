@@ -50,6 +50,7 @@
             Controls.Add(cmbGenres);
             Name = "Form1";
             Text = "Form1";
+            Resize += Form1_Resize;
             ResumeLayout(false);
         }
 

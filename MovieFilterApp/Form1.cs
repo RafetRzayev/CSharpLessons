@@ -29,6 +29,9 @@ namespace MovieFilterApp
 
         private void GenerateMovieBoxes()
         {
+            _boxes.Clear();
+            int boxCountByRow = (this.ClientSize.Width) / 200;
+
             for (int i = 0; i < _movies.Count; i++)
             {
                 _boxes.Add(new Button()
@@ -37,19 +40,38 @@ namespace MovieFilterApp
                     BackColor = ConvertGenreToColor(_movies[i].Genre),
                     Height = 100,
                     Width = 200,
-                    Top = 100,
-                    Left = 100 + i * 200
+                    Top = 200 + i / boxCountByRow * 100,
+                    Left = i % boxCountByRow * 200
                 });
             }
 
+            this.Controls.Clear();
             this.Controls.AddRange(_boxes.ToArray());
         }
 
         private void SeedData()
         {
             _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Seven", GenreType.Dram));
+            _movies.Add(new("Friends", GenreType.Comedy));
+            _movies.Add(new("Friends", GenreType.Comedy));
+            _movies.Add(new("Friends", GenreType.Comedy));
+            _movies.Add(new("Friends", GenreType.Comedy));
             _movies.Add(new("Friends", GenreType.Comedy));
             _movies.Add(new("Imposible", GenreType.Action));
+            _movies.Add(new("Imposible", GenreType.Action));
+            _movies.Add(new("Imposible", GenreType.Action));
+            _movies.Add(new("Imposible", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
+            _movies.Add(new("Red door", GenreType.Action));
             _movies.Add(new("Red door", GenreType.Action));
         }
 
@@ -89,6 +111,16 @@ namespace MovieFilterApp
                 else
                     _boxes[i].Visible = true;
             }
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            GenerateMovieBoxes();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            GenerateMovieBoxes();
         }
     }
 
