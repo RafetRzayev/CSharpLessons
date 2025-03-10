@@ -52,7 +52,10 @@ namespace SortVisualization
                                 panels[j] = panels[j + 1];
                                 panels[j + 1] = tmp;
 
-                                MovePanels(panels[j], panels[j + 1]);
+                                int tmp1 = panels[j].Left;
+                                panels[j].Left = panels[j + 1].Left;
+                                panels[j + 1].Left = tmp1;
+                                //MovePanels(panels[j], panels[j + 1]);
                                 Thread.Sleep(10);
                                 //var tmpLeft = panels[j].Left;
                                 //panels[j].Left = panels[j + 1].Left;
@@ -115,7 +118,7 @@ namespace SortVisualization
                 panel1.Left = i;
                 panel2.Left = j;
 
-                Thread.Sleep(1);
+                //Thread.Sleep(1);
             }
 
             for (int i = 0; i < panel1.Height; i++)
