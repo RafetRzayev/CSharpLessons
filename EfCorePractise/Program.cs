@@ -12,6 +12,9 @@ namespace EfCorePractise
                 {"show",Show },
                 {"update",Update },
                 {"remove",Remove },
+                {"show groups",ShowGroups },
+                {"show teachers",ShowTeachers },
+                {"show teacher groups",ShowTeacherGroups },
             };
 
             while (true)
@@ -45,11 +48,11 @@ namespace EfCorePractise
         {
             var dbContext = new AppDbContext();
 
-            var students = dbContext.Students;
+            var students = dbContext.Students.Include(x => x.Group);
 
             foreach (var item in students)
             {
-                Console.WriteLine($"{item.Id} {item.Name}");
+                Console.WriteLine($"{item.Id} {item.Name} {item.GroupId} {item.Group?.Name}");
             }
         }
 
@@ -93,6 +96,52 @@ namespace EfCorePractise
 
             dbContext.Students.Remove(existStudent);
             dbContext.SaveChanges();
+        }
+
+        static void ShowGroups()
+        {
+            var dbContext = new AppDbContext();
+
+            var groups = dbContext.Groups.Include(x => x.Students);
+
+            foreach (var item in groups)
+            {
+                Console.WriteLine(item.Name);
+
+                foreach (var student in item.Students)
+                {
+                    Console.WriteLine("--" + student.Name);
+                }
+            }
+        }
+
+        static void ShowTeachers()
+        {
+            var dbContext = new AppDbContext();
+
+            var teachers = dbContext.Teachers.Include(x => x.TeacherGroups).ThenInclude(x => x.Group);
+
+            foreach (var item in teachers)
+            {
+                Console.WriteLine(item.Name);
+
+                foreach (var tg in item.TeacherGroups)
+                {
+                    Console.WriteLine(tg.GroupId + " " + tg.Group?.Name);
+                }
+            }
+        }
+
+        static void ShowTeacherGroups()
+        {
+            var dbContext = new AppDbContext();
+
+            var teacherGroups = dbContext.TeacherGroups.Include(x => x.Group).Include(x => x.Teacher);
+
+            foreach (var item in teacherGroups)
+            {
+                Console.WriteLine(item.Group.Name + " " + item.Teacher.Name);
+            }
         }
     }
 }
